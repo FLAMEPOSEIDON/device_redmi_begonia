@@ -119,6 +119,12 @@ VENDOR_SECURITY_PATCH := 2020-02-01
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
+# Sepolicy
+include device/mediatek/sepolicy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 ODM_MANIFEST_SKUS += \
@@ -133,9 +139,6 @@ PRODUCT_FULL_TREBLE_OVERRIDE := true
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 PRODUCT_VENDOR_MOVE_ENABLED := true
 BOARD_VNDK_RUNTIME_DISABLE := true
-
-# Sepolicy
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 
 # Inherit from the proprietary version
 -include vendor/redmi/begonia/BoardConfigVendor.mk
