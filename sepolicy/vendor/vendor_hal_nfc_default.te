@@ -1,0 +1,12 @@
+typeattribute vendor_hal_nfc_default data_between_core_and_vendor_violators;
+
+allow vendor_hal_nfc_default nfc_data_file:dir { search getattr };
+allow vendor_hal_nfc_default nfc_data_file:file { rw_file_perms };
+allow vendor_hal_nfc_default nqnfc_hwservice:hwservice_manager add;
+allow vendor_hal_nfc_default nfc_device:chr_file { ioctl open read write };
+allow vendor_hal_nfc_default hidl_base_hwservice:hwservice_manager add;
+allow vendor_hal_nfc_default property_socket:sock_file write;
+allow vendor_hal_nfc_default vendor_data_file:dir { rw_dir_perms };
+allow vendor_hal_nfc_default vendor_data_file:file { create_file_perms rw_file_perms };
+allow vendor_hal_nfc_default init:unix_stream_socket connectto;
+allow vendor_hal_nfc_default nfc:binder call;
