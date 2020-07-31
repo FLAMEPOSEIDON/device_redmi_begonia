@@ -22,8 +22,6 @@
 /(system\/vendor|vendor)/bin/xcap		 u:object_r:xcap_exec:s0
 /(system\/vendor|vendor)/bin/wfca		 u:object_r:wfca_exec:s0
 /(system\/vendor|vendor)/bin/hw/vendor\.microtrust\.hardware\.soter@1\.0-service	u:object_r:hal_wechat_exec:s0
-/(system\/vendor|vendor)/bin/hw/vendor\.mediatek\.hardware\.mms@1\.3-service		u:object_r:mtk_hal_mms_exec:s0
-/(system\/vendor|vendor)/bin/hw/vendor\.mediatek\.hardware\.mms@1\.3-service-lazy	u:object_r:mtk_hal_mms_exec:s0
 
 /vendor/bin/volte_md_status                                        u:object_r:vendor_volte_md_status_exec:s0
 /vendor/bin/toybox_vendor                                          u:object_r:vendor_toolbox_exec:s0
