@@ -8,3 +8,5 @@ allow rild logmuch_prop:file { read open getattr map };
 allow rild nvram_agent_binder_hwservice:hwservice_manager find;
 allow rild vendor_system_prop:file { getattr map open read };
 allow rild telephony_prop:file { getattr map open read };
+allow rild exported3_default_prop:file { read };
+allow rild exported3_default_prop:file { open };

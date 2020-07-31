@@ -1,2 +1,4 @@
 allow fsck tmpfs:blk_file getattr;
 dontaudit fsck self:capability dac_read_search;
+allow fsck fsck:capability { dac_override };
+allow fsck persist_data_file:dir { getattr };

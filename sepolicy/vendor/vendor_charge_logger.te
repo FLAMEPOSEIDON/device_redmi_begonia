@@ -14,3 +14,5 @@ allow vendor_charge_logger vendor_data_file:file { getattr read write open appen
 allow vendor_charge_logger vendor_data_file:dir write;
 allow vendor_charge_logger self:netlink_kobject_uevent_socket { create bind };
 allow vendor_charge_logger vendor_charge_logger:netlink_kobject_uevent_socket { read };
+allow vendor_charge_logger vendor_data_file:dir { add_name };
+allow vendor_charge_logger vendor_data_file:file { create };

@@ -1,1 +1,2 @@
 allow mtk_agpsd system_suspend_hwservice:hwservice_manager find;
+allow mtk_agpsd system_suspend:binder { call };

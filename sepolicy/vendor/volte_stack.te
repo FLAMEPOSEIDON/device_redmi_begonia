@@ -17,3 +17,4 @@ allow volte_stack port:udp_socket name_bind;
 allow volte_stack node:tcp_socket node_bind;
 allow volte_stack node:udp_socket node_bind;
 allow volte_stack netd:unix_stream_socket connectto;
+allow volte_stack kernel:system { module_request };

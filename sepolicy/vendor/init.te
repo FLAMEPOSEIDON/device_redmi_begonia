@@ -46,3 +46,6 @@ allow init hal_citsensorservice_xiaomi_default_exec:file execute;
 allow init hal_misys_default_exec:file execute;
 allow init hal_touchfeature_xiaomi_default_exec:file execute;
 allow init persist_block_device:lnk_file relabelto;
+allow init proc:file { setattr };
+allow init sysfs_battery_supply:file { setattr };
+
